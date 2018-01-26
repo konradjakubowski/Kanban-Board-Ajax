@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Kanban board</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+	<header class="header text-center">
+        <p>A non-commercial portfolio project of Konrad Jakubowski</p>
+    </header>
+	<div id="board" class="board text-center">
+        <h1>Kanban Board</h1>
+        <button class="btn btn-info create-column" type="button">Add a column</button>
+        <div class="column-container">
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="js/Column.js"></script>
+    <script type="text/javascript" src="js/Card.js"></script>
+    <script type="text/javascript" src="js/Board.js"></script>
+    <script type="text/javascript" src="js/App.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,700&subset=latin-ext');
+
+body {
+    background: url('https://image.ibb.co/ddTDJb/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Russo One', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+ul {
+    list-style-type: none;
+}
+#board > h1 {
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 65px; 
+    text-shadow: 4px 4px #000;
+}
+.column {
+    float: left;
+    padding: 100px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.column-container {
+    padding: 20px;
+}
+.column > h2 {
+    text-shadow: 2px 2px #000;
+}
+.card {
+    height: 200px;
+    width: 150px;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 15px;
+    overflow: auto;
+    background-color: rgba(255,255,255,0.3);
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+.card > p {
+    margin-top: 15px;
+    color: #fff;
+}
+.card-description {
+    font-family: 'Bitter', serif;
+    font-size: 20px;
+}
+.column-card-list {
+    min-height: 150px;
+    padding: 0;
+}
+.btn {
+    border: 1px solid #fff;
+}
+.btn-primary {
+    background-color: rgba(131, 116, 230, 0.7);
+}
+.btn-info {
+    background-color: rgba(0,0,0,0.5);
+}
+.btn-info:hover{
+    background-color: darkslateblue;
+}
+.btn-danger {
+    background-color: rgba(0,0,0,0.2);
+}
+.btn-danger:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+.header > p {
+    letter-spacing: 2px;
+}
