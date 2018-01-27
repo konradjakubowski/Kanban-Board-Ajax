@@ -50,7 +50,7 @@ Column.prototype = {
 	deleteColumn: function() {
 	 var self = this;
 	 $.ajax ({
-	 	url = baseUrl + '/column/' + self.id
+	 	url : baseUrl + '/column/' + self.id,
 	 	method: 'DELETE',
 	 	success: function(responce) {
 	 		self.element.remove();
