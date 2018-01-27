@@ -16,8 +16,8 @@ $('.create-column')
 			data: {
 				name: columnName	
 			},
-			success: function(responce) {
-				var column = new Column(responce.id, columnName);
+			success: function(response) {
+				var column = new Column(response.id, columnName);
 				board.createColumn(column);
 			}	
 		});
