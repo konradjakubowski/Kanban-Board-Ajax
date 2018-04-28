@@ -1,6 +1,5 @@
 $(function(){
 
-  // FUNKCJE POMOCNICZE
   function initSortable() {
     $('.card-list').sortable({
       connectWith: '.card-list',
@@ -17,7 +16,6 @@ $(function(){
     return str;
   }
 
-  // KANBAN
   var board = {
     name: 'Tablica Kanban',
     createColumn: function(column) {
@@ -32,7 +30,6 @@ $(function(){
     board.createColumn(new Column(prompt('Wpisz nazwę kolumny')));
   });
 
-  // KLASA KANBAN COLUMN
   function Column(name) {
     var self = this;
 
@@ -41,14 +38,12 @@ $(function(){
     this.element = createColumn();
 
     function createColumn() {
-      // TWORZENIE NOWYCH WĘZŁÓW
       var column = $('<div class="column"></div>');
       var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
       var columnCardList = $('<ul class="card-list"></ul>');
       var columnDelete = $('<button class="btn-delete">x</button>');
       var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
 
-      // PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
       columnDelete.click(function() {
         self.deleteColumn();
       });
@@ -57,7 +52,6 @@ $(function(){
         self.createCard(new Card(prompt("Wpisz nazwę karty")));
       });
 
-      // KONSTRUOWANIE ELEMENTU KOLUMNY
       column.append(columnTitle)
       .append(columnDelete)
       .append(columnAddCard)
@@ -74,7 +68,6 @@ $(function(){
     }
   };
 
-  // KLASA KANBAN CARD
   function Card(description) {
     var self = this;
 
@@ -101,21 +94,17 @@ $(function(){
     }
   }
 
-  // TWORZENIE NOWYCH EGZEMPLARZY KOLUMN
   var todoColumn = new Column('Do zrobienia');
   var doingColumn = new Column('W trakcie');
   var doneColumn = new Column('Skończone');
 
-  // DODAWANIE KOLUMN DO TABLICY
   board.createColumn(todoColumn);
   board.createColumn(doingColumn);
   board.createColumn(doneColumn);
 
-  // TWORZENIE NOWYCH EGZEMPLARZY KART
   var card1 = new Card('Nowe zadanie');
   var card2 = new Card('stworzyc tablice kanban');
 
-  // DODAWANIE KART DO KOLUMN
   todoColumn.createCard(card1);
   doingColumn.createCard(card2);
 })
